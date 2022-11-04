@@ -2,10 +2,10 @@ import pyautogui
 from pynput.keyboard import *
 import time
 
-delay = 0.1
+delay = 1
 message = 'wh'
-resume_key = Key.f1
-pause_key = Key.f2
+resume_key = Key.home
+pause_key = Key.end
 exit_key = Key.esc
 
 pause = True
@@ -29,9 +29,9 @@ def display_controls():
     print('======SETTING======')
     print("message = " + message)
     print("delay = " + str(delay))
-    print("F1 = Resume")
-    print("F2 = Pause")
-    print("F3 = Exit")
+    print("Home = Resume")
+    print("End = Pause")
+    print("Esc = Exit")
 
 def main():
     lis = Listener(on_press=on_press)
